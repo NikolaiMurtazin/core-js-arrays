@@ -77,9 +77,7 @@ function findElement(arr, value) {
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
 function findAllOccurrences(arr, item) {
-  return arr.reduce(function (count, el) {
-    return count + (el === item ? 1 : 0);
-  }, 0);
+  return arr.reduce((count, el) => count + (el === item ? 1 : 0), 0);
 }
 
 /**
@@ -109,9 +107,7 @@ function removeFalsyValues(arr) {
  *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
  */
 function getStringsLength(arr) {
-  return arr.map(function (s) {
-    return s.length;
-  });
+  return arr.map((s) => s.length);
 }
 
 /**
@@ -131,9 +127,7 @@ function getStringsLength(arr) {
 function getAverage(arr) {
   if (arr.length === 0) return 0;
 
-  const sum = arr.reduce(function (acc, v) {
-    return acc + v;
-  }, 0);
+  const sum = arr.reduce((acc, v) => acc + v, 0);
   return Number((sum / arr.length).toFixed(2));
 }
 
